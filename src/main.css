@@ -1,0 +1,108 @@
+html {
+    --mml-green: #1b6b3b;
+    --mml-red: #c1173c;
+    --button-height: 50px;
+}
+.flex-container {
+    display: flex;;
+}
+[data-contains-buttons] {
+    position: relative;
+}
+[data-contains-buttons="bottom"] {
+    padding-bottom:var(--button-height);
+}
+.button {
+    appearance: none;
+    outline: none;
+    border: none;
+    --button-color: #000;
+    --text-color: #fff;
+    border-radius: 30px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 700;
+    height: var(--button-height);
+}
+.button.outline {
+    border: 2px solid var(--button-color);
+    color: var(--button-color);
+    background-color: #fff;
+}
+.button.outline:hover {
+    background-color: var(--button-color);
+    color: var(--text-color);
+}
+.buttons-container.flex-container > .button {
+    flex: 1;
+}
+.button-cancel {
+    --button-color: var(--mml-red);
+}
+.button-confirm {
+    --button-color: var(--mml-green);
+}
+[data-contains-buttons] > .buttons-container {
+    position: absolute;
+    width: 100%;
+}
+[data-contains-buttons="bottom"] > .buttons-container {
+    bottom: 0;
+    left: 0;
+}
+.custom-figure {
+    padding: 2px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.custom-figure:hover {
+    border-color: #44f;
+}
+.custom-figure {
+    display: inline-block;
+}
+.custom-figure-wrapper {
+    margin: 0.5em auto;
+    width: 90%;
+    max-width: 500px;
+    /* margin-right: 50%; */
+    /* display: inline-block; */
+    /* float: left; */
+    /* clear:both; */
+}
+.custom-figure-wrapper:after {
+    content: "";
+    display: block;
+}
+.custom-figure img{
+    display: block;
+    max-height: 400px;
+    width: auto;
+    object-fit: contain;
+}
+.custom-figure-caption {
+    color: #777;
+    padding-left: 0.5em;
+    background-color: #fff;
+}
+.custom-figure-caption.editing {
+    /* border-color: #44f */
+}
+.custom-figure-caption-edit-wrapper {
+    display: block;
+}
+.editing .custom-figure-caption-edit-wrapper {
+    display: block;
+}
+.custom-figure-caption-edit-field-tool {
+    cursor: pointer;
+}
+.custom-figure-caption-edit-div {
+    min-height: 100px;
+    max-height: 300px;
+    border: 1px solid #000;
+}
+.mml-caption-editor-wrapper .ql-container{
+    height: 80px;
+}
