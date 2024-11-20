@@ -10,6 +10,17 @@ import { QuillEditor, Quill } from '@vueup/vue-quill';
 import FigureBlot from './quill-blots/FigureBlot.js';
 import FigureEditor from './FigureEditor.vue';
 import './main.css';
+// console.log('script');
+// try {
+// 	console.log(import.meta.env.VUE_APP_DIRECTUS_URL);
+// } catch{
+// 	console.log('fail to read import.meta.env.VUE_APP_DIRECTUS_URL')
+// }
+// try {
+// 	console.log(process.env.VUE_APP_DIRECTUS_URL);
+// } catch{
+// 	console.log('fail to read process.env.VUE_APP_DIRECTUS_URL')
+// }
 
 // Props
 export default {
@@ -33,7 +44,7 @@ export default {
 		const figureEditorCaption = ref('');
 		const figureInsertPosition = ref(0);
 		const figureEditorFigureToReplace = ref(null);
-		const api_base_url = 'http://0.0.0.0:8055';
+		const api_base_url = '';
 		
 		const editorOptions = {
 			modules: {
@@ -66,7 +77,7 @@ export default {
 					<div class="custom-figure-wrapper">
 						<figure class="custom-figure">
 							<div class="image-wrapper figure-image-wrapper">
-								<img class="figure-image" src="${api_base_url}/assets/${img_id}" alt="Image">
+								<img class="figure-image" src="/assets/${img_id}" alt="Image" />
 							</div>
 							<figcaption class="custom-figure-caption ${caption ? '' : 'empty'}">${caption}</figcaption>
 						</figure>

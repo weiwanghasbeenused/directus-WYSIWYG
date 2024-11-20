@@ -30,11 +30,11 @@ export default {
     },
     emits: ['input'],
 	setup(props, { emit }) {
-        const status = ref(0);
         
+        const status = ref(0);
         const message = ref('Click to upload');
         const previewRef = ref(null);
-        const api_base_url = 'http://0.0.0.0:8055';
+        const api_base_url = '';
         let selectedFile = null;
 
         const editorOptions = {

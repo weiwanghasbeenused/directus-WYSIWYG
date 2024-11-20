@@ -43,7 +43,7 @@ export default {
             num_fetched = 0,
             kept_img_id = '';
             
-        const api_base_url = 'http://0.0.0.0:8055',
+        const api_base_url = '',
               num_per_fetch = 20,
               status = ref(0),
               fetched = ref([]),
@@ -179,6 +179,7 @@ export default {
     opacity: 1;
     pointer-events: auto;
     height: 100%;
+    width: 100%;
 }
 .mml-media-manager-selector {
     
